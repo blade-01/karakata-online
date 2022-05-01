@@ -6,10 +6,10 @@ const adminRoutes = [
     redirect: '/admin/dashboard',
     component: () => import('@/layouts/Admin.vue'),
     children: [
-      // {
-      //   path: '/admin/dashboard',
-      //   component: Dashboard
-      // }
+      {
+        path: '/admin/auto-config',
+        component: () => import('@/views/admin/AutomaticConfiguration.vue')
+      }
     ]
   },
   { path: '/:pathMatch(.*)*', redirect: '/' }
